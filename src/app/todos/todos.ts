@@ -2,7 +2,6 @@ import { Component, inject, OnInit, signal } from '@angular/core';
 import { Todo } from '../services/todo';
 import { todo } from '../models/todo.type';
 import { catchError, pipe } from 'rxjs';
-import { error } from 'console';
 
 @Component({
   selector: 'app-todos',
