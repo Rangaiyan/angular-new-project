@@ -1,0 +1,76 @@
+.greetings-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.greeting-message {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    text-align: center;
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+}
+
+.greeting-input {
+    width: 100%;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.greeting-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.greeting-input:focus {
+    border-color: #c471ed;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 20px rgba(196, 113, 237, 0.4);
+    transform: scale(1.02);
+}
