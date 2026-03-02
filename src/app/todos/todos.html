@@ -1,6 +1,9 @@
 <main class="home-container">
     <h1 class="home-title">Todos</h1>
     <div class="todos-wrapper">
+        @if(!todoItems().length){
+        <h1>Loading....</h1>
+        }
         @for (todo of todoItems(); track todo.id) {
         <div class="todo-item" [class.completed]="todo.completed">
             <div class="todo-header">
