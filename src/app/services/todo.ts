@@ -28,7 +28,7 @@ export class Todo {
   }
 
   getTodoItem() {
-    const url = `https://jsonplaceholder.typicode.com/todos`;
+    const url = `http://localhost:8080/api/todos`;
     return this.http.get<Array<todo>>(url);
   }
 }
